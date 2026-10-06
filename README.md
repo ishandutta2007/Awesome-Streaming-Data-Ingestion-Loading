@@ -1,321 +1,156 @@
-# Awesome-Streaming-Data-Ingestion-Loading
-
-## Top Streaming Data Ingestion & Loading Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Real-Time Ingestion, Event Streaming & Self-Hosted Data Loading*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial streaming ingestion platforms** and **open-source projects** that capture, buffer, and load data in motion — from event streams, databases, logs, and APIs into data lakes, warehouses, and analytical systems with low latency.
-
-
-
-**Examples** include AWS Kinesis Data Firehose, Confluent Cloud, Apache Kafka, Google Cloud Dataflow, Databricks Auto Loader, Azure Event Hubs, Redpanda Cloud, Striim, Hevo Data, and Airbyte (the category leaders).
-
-
-
-**Open-source emphasis**: Streaming ingestion is one of the strongest open-source domains. **Apache Kafka** anchors event streaming, **Redpanda** delivers C++ performance, **Vector** and **Fluent Bit** handle observability pipelines, and **Debezium** dominates CDC. **Airbyte**, **Meltano**, and **Apache SeaTunnel** provide ELT ingestion, while **Benthos/Redpanda Connect** enables declarative pipelines. **Apache Flink** and **Kafka Streams** complete the processing layer. This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[AWS Kinesis Data Firehose](https://aws.amazon.com/kinesis/data-firehose/)**  
-
-  **AWS's fully managed streaming delivery service** — automatically loads data into S3, Redshift, OpenSearch, and Splunk . **No infrastructure to manage** — scales automatically with throughput . **Built-in transformation** with Lambda for format conversion and enrichment . **Best for AWS-native streaming ingestion** .
-
-
-
-- **[Confluent Cloud](https://www.confluent.io/confluent-cloud/)**  
-
-  **The leading managed Kafka platform** — fully managed Kafka, ksqlDB, Flink, connectors, and schema registry . **The enterprise standard for event streaming** . **Best for organizations wanting Kafka without operational burden** .
-
-
-
-- **[Google Cloud Dataflow](https://cloud.google.com/dataflow)**  
-
-  **Google's fully managed stream and batch processing** based on Apache Beam . **Unified programming model** — same code for batch and stream . **Auto-scaling with real-time processing** . **Best for Google Cloud data pipelines** .
-
-
-
-- **[Databricks Auto Loader](https://www.databricks.com/)**  
-
-  **Incremental data ingestion for lakehouses** — automatically detects and processes new files as they arrive in cloud storage . **Schema inference and evolution** — handles changing data structures . **Best for Databricks lakehouse ingestion** .
-
-
-
-- **[Azure Event Hubs](https://azure.microsoft.com/en-us/products/event-hubs/)**  
-
-  **Azure's big data streaming platform** — millions of events per second . **Event Hubs Capture** automatically loads data to Blob Storage and Azure Data Lake . **Best for Azure-native streaming** .
-
-
-
-- **[Redpanda Cloud](https://redpanda.com/)**  
-
-  **Kafka-compatible streaming platform in C++** — no Zookeeper, no JVM . **10x faster than Kafka** in some benchmarks . **Best for high-performance streaming** .
-
-
-
-- **[Striim](https://www.striim.com/)**  
-
-  **Real-time data integration and streaming analytics** — CDC, database replication, and cloud migration . **Best for enterprise real-time pipelines** .
-
-
-
-- **[Hevo Data](https://hevodata.com/)**  
-
-  **No-code data pipeline platform** — 150+ connectors with automatic schema mapping . **Best for no-code ETL** .
-
-
-
-- **[Airbyte Cloud](https://airbyte.com/)**  
-
-  **Managed version of the leading open-source ELT platform** — 300+ connectors . **Best for open-source ELT with managed convenience** .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Event Streaming Platforms
-
-
-
-- **[Apache Kafka](https://github.com/apache/kafka)**  
-
-  **The de facto standard for event streaming**, Apache-2.0 licensed with **28,000+ GitHub stars** . **Distributed, fault-tolerant, high-throughput pub/sub messaging** . **Kafka Connect for source/sink connectors** and **Kafka Streams for stream processing** . **The foundation for most streaming ingestion architectures** . **Best for enterprise event streaming at scale** .
-
-
-
-- **[Redpanda](https://github.com/redpanda-data/redpanda)**  
-
-  **Kafka-compatible streaming platform in C++**, BSL licensed (free for most uses) . **No Zookeeper, no JVM** — simpler operations . **10x faster than Kafka** in some benchmarks . **Best for teams wanting Kafka compatibility with better performance** .
-
-
-
-- **[Apache Pulsar](https://github.com/apache/pulsar)**  
-
-  **Distributed messaging and streaming platform**, Apache-2.0 licensed with **14,000+ GitHub stars** . **Multi-tenancy, geo-replication, and tiered storage** . **The main alternative to Kafka** . **Best for multi-tenant and geo-distributed streaming** .
-
-
-
-- **[NATS](https://github.com/nats-io/nats-server)**  
-
-  **Cloud-native messaging system**, Apache-2.0 licensed . **Lightweight, high-performance pub/sub** with JetStream for persistence . **Best for IoT and edge streaming** .
-
-
-
-### Data Ingestion & Loading
-
-
-
-- **[Airbyte](https://github.com/airbytehq/airbyte)**  
-
-  **The leading open-source ELT platform**, MIT licensed with **16,000+ GitHub stars** . **300+ connectors for databases, APIs, and SaaS applications** . **Self-hosted or cloud** — full data control . **The de facto open-source Fivetran alternative** . **Best for open-source ELT at scale** .
-
-
-
-- **[Meltano](https://github.com/meltano/meltano)**  
-
-  **Open-source ELT platform built on Singer**, MIT licensed . **500+ taps and targets** — extract, load, and transform . **Best for Singer-based ELT pipelines** .
-
-
-
-- **[Apache SeaTunnel](https://github.com/apache/seatunnel)**  
-
-  **High-performance data integration platform**, Apache-2.0 licensed . **Batch and stream processing with 100+ connectors** . **Best for large-scale data integration** .
-
-
-
-- **[Apache NiFi](https://github.com/apache/nifi)**  
-
-  **Open-source data flow automation**, Apache-2.0 licensed with **4,000+ GitHub stars** . **Visual programming for data routing, transformation, and ingestion** . **Best for data flow management** .
-
-
-
-- **[Benthos (Redpanda Connect)](https://github.com/redpanda-data/connect)**  
-
-  **Stream processing without code**, Apache-2.0 licensed with **8,000+ GitHub stars** . **Declarative YAML configuration for streaming ETL** . **Hundreds of connectors** — Kafka, MQTT, HTTP, databases . **Best for data engineers wanting stream pipelines without programming** .
-
-
-
-- **[Vector](https://github.com/vectordotdev/vector)**  
-
-  **High-performance observability data pipeline**, MPL-2.0 licensed with **18,000+ GitHub stars** . **Collect, transform, and route logs, metrics, and events** . **Rust-based for performance** . **Best for observability and log streaming** .
-
-
-
-- **[Fluent Bit](https://github.com/fluent/fluent-bit)**  
-
-  **Lightweight log and data processor**, Apache-2.0 licensed . **The standard for Kubernetes log collection** . **Best for edge and container log ingestion** .
-
-
-
-- **[Fluentd](https://github.com/fluent/fluentd)**  
-
-  **Unified logging layer**, Apache-2.0 licensed . **500+ plugins for data collection and routing** . **Best for log aggregation** .
-
-
-
-- **[Embulk](https://github.com/embulk/embulk)**  
-
-  **Pluggable bulk data loader**, Apache-2.0 licensed . **Parallel data loading between databases and storage** . **Best for batch data ingestion** .
-
-
-
-### Change Data Capture (CDC)
-
-
-
-- **[Debezium](https://github.com/debezium/debezium)**  
-
-  **The leading open-source CDC platform**, Apache-2.0 licensed with **10,000+ GitHub stars** . **Captures row-level changes from PostgreSQL, MySQL, MongoDB, Oracle, SQL Server, and more** . **Kafka Connect-based** — integrates with Kafka, Pulsar, and other sinks . **The de facto standard for CDC** . **Best for database replication and real-time sync** .
-
-
-
-- **[Maxwell](https://github.com/zendesk/maxwell)**  
-
-  **MySQL CDC to Kafka**, open-source . **Lightweight alternative to Debezium** . **Best for MySQL-only CDC** .
-
-
-
-- **[Canal](https://github.com/alibaba/canal)**  
-
-  **Alibaba's MySQL binlog incremental subscription**, Apache-2.0 licensed . **Best for MySQL CDC in Asia** .
-
-
-
-- **[PGDeltaStream](https://github.com/beOweb/pgdelta)**  
-
-  **PostgreSQL logical replication for streaming**, open-source . **Best for PostgreSQL CDC** .
-
-
-
-### Stream Processing
-
-
-
-- **[Apache Flink](https://github.com/apache/flink)**  
-
-  **The de facto standard for stateful stream processing**, Apache-2.0 licensed with **24,000+ GitHub stars** . **Exactly-once semantics, event-time processing, and savepoints** . **The engine behind Alibaba's Singles' Day** . **Best for mission-critical stream processing** .
-
-
-
-- **[Apache Spark Structured Streaming](https://github.com/apache/spark)**  
-
-  **Unified batch and stream processing**, Apache-2.0 licensed . **Micro-batch with exactly-once semantics** . **Best for teams already using Spark** .
-
-
-
-- **[Kafka Streams](https://github.com/apache/kafka)**  
-
-  **Stream processing library for Kafka**, Apache-2.0 licensed . **No separate cluster** — runs in your application . **Best for Kafka-native stream processing** .
-
-
-
-- **[ksqlDB](https://github.com/confluentinc/ksql)**  
-
-  **Streaming SQL for Kafka**, Confluent Community License . **SQL interface for Kafka Streams** . **Best for SQL-proficient teams** .
-
-
-
-- **[Apache Beam](https://github.com/apache/beam)**  
-
-  **Unified programming model for batch and stream**, Apache-2.0 licensed . **Portable across Flink, Spark, Dataflow, and Samza** . **Best for portable pipelines** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Apache Flume** — Log aggregation (largely superseded) .
-
-- **Logstash** — Data collection and transformation .
-
-- **Apache Sqoop** — Hadoop data transfer (retired) .
-
-- **dlt** — Python library for data loading .
-
-- **dbt** — SQL-based transformation (not ingestion but complementary) .
-
-- **Apache Airflow** — Workflow orchestration .
-
-- **Dagster** — Data orchestration .
-
-- **Prefect** — Modern workflow orchestration .
-
-
-
-**Frameworks for building custom streaming ingestion solutions**: Combine **Apache Kafka** or **Redpanda** for event streaming . Use **Airbyte** for ELT with 300+ connectors . Deploy **Debezium** for CDC from databases . Choose **Apache Flink** for stateful stream processing . Integrate **Benthos** or **Vector** for code-free pipelines and observability data . Use **Fluent Bit** for lightweight log ingestion . Note that true enterprise streaming ingestion with managed infrastructure, global scale, and vendor-supported SLAs (Confluent Cloud, Kinesis Firehose, Striim) remains primarily commercial territory; open-source stacks provide strong event streaming, ELT, CDC, and stream processing foundations that require integration for complete data pipelines.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Streaming ingestion platforms handle sensitive business data in motion. Self-hosted solutions require proper security hardening, access controls, and compliance with data privacy regulations.
-
-- **License considerations**: Redpanda uses BSL (free for most uses but not OSI), ksqlDB uses Confluent Community License, and some CDC tools have specific licensing. Verify licensing against your use case before committing .
-
-- **Open-source streaming ingestion requires operational expertise** — Kafka clusters, Flink jobs, and CDC connectors require monitoring, tuning, and maintenance. Managed platforms shift this responsibility to the vendor.
-
-- **Data quality and schema evolution are critical** — streaming pipelines must handle schema changes, late data, and exactly-once semantics. Test thoroughly before production .
-
-- The open-source ecosystem provides strong event streaming, ELT, CDC, and stream processing foundations, but **managed infrastructure, global scale, and vendor-supported SLAs** remain primarily commercial offerings.
-
-
+# ⚡ Awesome Streaming Data Ingestion & Loading
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading?style=social" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading?color=blue" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Streaming Data Ingestion Banner" width="100%">
+</p>
 
 ---
 
+### 🌊 Curated Guide to Streaming Data Ingestion, Real-Time Event Streaming & Self-Hosted Data Loading Systems
 
+Welcome to the definitive, SEO-optimized repository tracking notable **commercial streaming ingestion platforms**, **managed cloud services**, and **open-source GitHub projects**. These technologies capture, buffer, transform, and load data in motion — from event streams, database CDC logs, IoT sensors, and APIs into data lakes, lakehouses, warehouses, and analytical stores with sub-second latency.
 
-**Made for data engineers, platform teams, and organizations seeking data pipeline sovereignty.**  
+---
 
-Let's make streaming data ingestion and loading more open, transparent, and reliable.
+## 📑 Table of Contents
+- [🏢 SaaS & Managed Cloud Platforms](#-saas--managed-cloud-platforms)
+- [🚀 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🎯 Framework Selection Guide](#-framework-selection-guide)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [📜 Disclaimer](#-disclaimer)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
+
+---
+
+## 🏢 SaaS & Managed Cloud Platforms
+
+📊 **Market Size & Industry Structure**: The global **Streaming Data Ingestion & Real-Time Analytics Market** is estimated at **$18.5 Billion** and is projected to reach **$42.8 Billion by 2030** (CAGR ~21.5%). The market is **moderately fragmented**—anchored by cloud hyperscalers (Azure, AWS, Google Cloud) and enterprise streaming infrastructure leaders (Databricks, Confluent), while coexisting with fast-growing specialized real-time CDC and ELT platforms (Airbyte, Redpanda, Striim, Hevo).
+
+Below is the curated list of enterprise SaaS & managed streaming ingestion platforms, sorted by **Company Size / Revenue / Valuation (Descending)**:
+
+| Platform / Product 🏢 | Description & Capabilities 📝 | Starting Price 💰 | Free Tier / Trial Limits 🎁 | Company Size / Valuation 📊 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Microsoft Azure Event Hubs](https://azure.microsoft.com/en-us/products/event-hubs/)** | Azure's big data streaming platform & event ingestion service. Event Hubs Capture automatically streams data to Blob Storage and Azure Data Lake. | `$0.015/hour per Throughput Unit (~$11/month) or $0.028/GB for Event Hubs Capture` | `1,000,000 free ingress events + 30-Day $200 free credit trial` | **Microsoft Azure ($110B+ Cloud Rev)** |
+| **[AWS Kinesis Data Firehose](https://aws.amazon.com/kinesis/data-firehose/)** | AWS fully managed streaming delivery service — automatically loads data into S3, Redshift, OpenSearch, and Splunk with inline Lambda transformations. | `$0.029 per GB ingested (first 500 TB/mo) + $0.0000002 per transformation request` | `AWS Free Tier: 25 GB/month free ingestion for 12 months` | **AWS ($100B+ Cloud Rev)** |
+| **[Databricks Auto Loader](https://www.databricks.com/)** | Incremental streaming ingestion for lakehouses — automatically detects and loads millions of files per hour from cloud storage into Delta Lake with schema evolution. | `$0.07 to $0.40 per DBU (Databricks Unit) depending on compute tier (~$0.15/DBU avg)` | `14-day full-featured free trial with $300 cloud credits` | **Databricks ($43B Valuation)** |
+| **[Google Cloud Dataflow](https://cloud.google.com/dataflow)** | Google Cloud fully managed serverless stream and batch data processing powered by Apache Beam with auto-scaling and sub-second latency. | `$0.056/hour per vCPU + $0.0069/hour per GB memory (~$0.07/unit-hour)` | `90-day free trial with $300 free credits across Google Cloud` | **Google Cloud ($40B+ Cloud Rev)** |
+| **[Confluent Cloud](https://www.confluent.io/confluent-cloud/)** | The enterprise standard managed Apache Kafka platform — fully managed Kafka, ksqlDB, Flink, 120+ cloud connectors, and governance schema registry. | `$0.10/hour per cluster unit + $0.11/GB egress / $0.05/GB ingress (Basic cluster from $0.00/hr base + usage)` | `$400 free credits valid for 30 days upon sign-up` | **Confluent ($8B Valuation / $1B ARR)** |
+| **[Airbyte Cloud](https://airbyte.com/)** | Managed version of the leading open-source ELT platform — 300+ pre-built connectors for streaming data replication into warehouses and vector databases. | `$0.10 per Credit (~$10/GB or 6k rows per credit for database/warehouse targets)` | `14-day free trial with 6,000 free credits (no credit card required)` | **Airbyte ($1.5B Valuation)** |
+| **[Redpanda Cloud](https://redpanda.com/)** | Kafka-compatible high-performance streaming platform built in C++ — zero Zookeeper, zero JVM, 10x faster latency with serverless stream loading. | `$0.14 per Serverless Unit-hour or ~$0.08/GB data transfer` | `14-day free trial with $300 serverless & dedicated credits` | **Redpanda ($200M+ Valuation / $115M Raised)** |
+| **[Striim](https://www.striim.com/)** | Enterprise real-time data integration & CDC streaming analytics platform for zero-downtime cloud migration and continuous database replication. | `$1,500/month starting base license for enterprise streaming CDC pipelines` | `30-day free trial with up to 10 Million events stream limit` | **Striim ($100M+ Valuation / $100M+ Raised)** |
+| **[Hevo Data](https://hevodata.com/)** | No-code automated data pipeline platform — 150+ connectors with automated schema mapping and near real-time streaming data ingestion. | `$239/month for Starter Plan (up to 5 Million Events/month)` | `Free Forever Plan (1 Million Events/month) + 14-day free trial for premium tiers` | **Hevo Data ($100M+ Valuation / $40M Raised)** |
+
+---
+
+## 🚀 Open-Source GitHub Projects
+
+Streaming data ingestion is one of the strongest open-source software ecosystems. Below is a comprehensive, curated matrix of top open-source projects across **Event Streaming**, **Stream Processing**, **ELT & Data Loading**, **CDC (Change Data Capture)**, **Log Observability**, and **Data Lakehouse Storage**.
+
+> 💡 **Note**: Every star badge links directly to the repo's official **Stargazers Page**. The list is sorted strictly by **GitHub Star Count (Descending)**.
+
+| Project Name 🚀 | GitHub Stars ⭐ | Category 🏷️ | Description & Key Features 📝 | License 📜 |
+| :--- | :---: | :--- | :--- | :---: |
+| **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** | <a href="https://github.com/ClickHouse/ClickHouse/stargazers"><img src="https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white" alt="ClickHouse Stars"/></a> | `Real-Time Analytical Storage` | Columnar real-time DBMS for ultra-fast streaming ingestion & analytics. | `Apache-2.0` |
+| **[Apache Airflow](https://github.com/apache/airflow)** | <a href="https://github.com/apache/airflow/stargazers"><img src="https://img.shields.io/github/stars/apache/airflow?style=social&color=white" alt="Apache Airflow Stars"/></a> | `Orchestration & Workflow` | Programmatically author, schedule, and orchestrate complex data ingestion pipelines. | `Apache-2.0` |
+| **[Apache Spark Structured Streaming](https://github.com/apache/spark)** | <a href="https://github.com/apache/spark/stargazers"><img src="https://img.shields.io/github/stars/apache/spark?style=social&color=white" alt="Apache Spark Structured Streaming Stars"/></a> | `Stream Processing` | Unified batch and stream processing engine with micro-batch & continuous streaming. | `Apache-2.0` |
+| **[Apache Kafka](https://github.com/apache/kafka)** | <a href="https://github.com/apache/kafka/stargazers"><img src="https://img.shields.io/github/stars/apache/kafka?style=social&color=white" alt="Apache Kafka Stars"/></a> | `Event Streaming Platforms` | The distributed event streaming platform for high-throughput data pipelines & Kafka Streams. | `Apache-2.0` |
+| **[Canal](https://github.com/alibaba/canal)** | <a href="https://github.com/alibaba/canal/stargazers"><img src="https://img.shields.io/github/stars/alibaba/canal?style=social&color=white" alt="Canal Stars"/></a> | `Change Data Capture (CDC)` | MySQL binlog incremental subscription and Change Data Capture (CDC) component. | `Apache-2.0` |
+| **[Apache Flink](https://github.com/apache/flink)** | <a href="https://github.com/apache/flink/stargazers"><img src="https://img.shields.io/github/stars/apache/flink?style=social&color=white" alt="Apache Flink Stars"/></a> | `Stream Processing` | Stateful stream processing framework with low-latency event-time processing. | `Apache-2.0` |
+| **[Vector](https://github.com/vectordotdev/vector)** | <a href="https://github.com/vectordotdev/vector/stargazers"><img src="https://img.shields.io/github/stars/vectordotdev/vector?style=social&color=white" alt="Vector Stars"/></a> | `Observability & Log Streaming` | High-performance observability data pipeline in Rust for logs, metrics, and events. | `MPL-2.0` |
+| **[Airbyte](https://github.com/airbytehq/airbyte)** | <a href="https://github.com/airbytehq/airbyte/stargazers"><img src="https://img.shields.io/github/stars/airbytehq/airbyte?style=social&color=white" alt="Airbyte Stars"/></a> | `Data Ingestion & ELT` | Open-source ELT data integration engine with 300+ pre-built connectors. | `ELv2/MIT` |
+| **[NATS](https://github.com/nats-io/nats-server)** | <a href="https://github.com/nats-io/nats-server/stargazers"><img src="https://img.shields.io/github/stars/nats-io/nats-server?style=social&color=white" alt="NATS Stars"/></a> | `Event Streaming Platforms` | Cloud-native, lightweight pub/sub messaging system with JetStream persistence. | `Apache-2.0` |
+| **[Apache Pulsar](https://github.com/apache/pulsar)** | <a href="https://github.com/apache/pulsar/stargazers"><img src="https://img.shields.io/github/stars/apache/pulsar?style=social&color=white" alt="Apache Pulsar Stars"/></a> | `Event Streaming Platforms` | Multi-tenant, geo-replicated distributed messaging & streaming storage system. | `Apache-2.0` |
+| **[dbt Core](https://github.com/dbt-labs/dbt-core)** | <a href="https://github.com/dbt-labs/dbt-core/stargazers"><img src="https://img.shields.io/github/stars/dbt-labs/dbt-core?style=social&color=white" alt="dbt Core Stars"/></a> | `Transformation & Analytics` | Transform data in motion and at rest inside data warehouses with SQL. | `Apache-2.0` |
+| **[Fluentd](https://github.com/fluent/fluentd)** | <a href="https://github.com/fluent/fluentd/stargazers"><img src="https://img.shields.io/github/stars/fluent/fluentd?style=social&color=white" alt="Fluentd Stars"/></a> | `Observability & Log Streaming` | Unified logging layer for log collection, parsing, and streaming ingestion. | `Apache-2.0` |
+| **[Debezium](https://github.com/debezium/debezium)** | <a href="https://github.com/debezium/debezium/stargazers"><img src="https://img.shields.io/github/stars/debezium/debezium?style=social&color=white" alt="Debezium Stars"/></a> | `Change Data Capture (CDC)` | Leading open-source CDC platform capturing row-level changes from databases into Kafka. | `Apache-2.0` |
+| **[Redpanda](https://github.com/redpanda-data/redpanda)** | <a href="https://github.com/redpanda-data/redpanda/stargazers"><img src="https://img.shields.io/github/stars/redpanda-data/redpanda?style=social&color=white" alt="Redpanda Stars"/></a> | `Event Streaming Platforms` | Kafka-compatible event streaming platform written in C++ with zero JVM/Zookeeper. | `BSL` |
+| **[Apache SeaTunnel](https://github.com/apache/seatunnel)** | <a href="https://github.com/apache/seatunnel/stargazers"><img src="https://img.shields.io/github/stars/apache/seatunnel?style=social&color=white" alt="Apache SeaTunnel Stars"/></a> | `Data Ingestion & ELT` | High-performance distributed data integration engine supporting batch and stream sync. | `Apache-2.0` |
+| **[RisingWave](https://github.com/risingwavelabs/risingwave)** | <a href="https://github.com/risingwavelabs/risingwave/stargazers"><img src="https://img.shields.io/github/stars/risingwavelabs/risingwave?style=social&color=white" alt="RisingWave Stars"/></a> | `Stream Processing` | Distributed SQL database for real-time stream processing and continuous materialization. | `Apache-2.0` |
+| **[Apache Iceberg](https://github.com/apache/iceberg)** | <a href="https://github.com/apache/iceberg/stargazers"><img src="https://img.shields.io/github/stars/apache/iceberg?style=social&color=white" alt="Apache Iceberg Stars"/></a> | `Streaming Data Lake Storage` | High-performance open table format for huge analytic datasets supporting streaming ingestion. | `Apache-2.0` |
+| **[Delta Lake](https://github.com/delta-io/delta)** | <a href="https://github.com/delta-io/delta/stargazers"><img src="https://img.shields.io/github/stars/delta-io/delta?style=social&color=white" alt="Delta Lake Stars"/></a> | `Streaming Data Lake Storage` | Open-source storage layer that brings ACID transactions and streaming reads/writes to data lakes. | `Apache-2.0` |
+| **[Redpanda Connect (Benthos)](https://github.com/redpanda-data/connect)** | <a href="https://github.com/redpanda-data/connect/stargazers"><img src="https://img.shields.io/github/stars/redpanda-data/connect?style=social&color=white" alt="Redpanda Connect (Benthos) Stars"/></a> | `Stream Processing / Ingestion` | Declarative stream processor for data pipeline integration without writing code. | `Apache-2.0` |
+| **[Apache Beam](https://github.com/apache/beam)** | <a href="https://github.com/apache/beam/stargazers"><img src="https://img.shields.io/github/stars/apache/beam?style=social&color=white" alt="Apache Beam Stars"/></a> | `Stream Processing` | Unified programming model for portable batch and streaming data processing pipelines. | `Apache-2.0` |
+| **[Fluent Bit](https://github.com/fluent/fluent-bit)** | <a href="https://github.com/fluent/fluent-bit/stargazers"><img src="https://img.shields.io/github/stars/fluent/fluent-bit?style=social&color=white" alt="Fluent Bit Stars"/></a> | `Observability & Log Streaming` | Fast, ultra-lightweight log and metrics processor and forwarder for Kubernetes & Edge. | `Apache-2.0` |
+| **[Apache Hudi](https://github.com/apache/hudi)** | <a href="https://github.com/apache/hudi/stargazers"><img src="https://img.shields.io/github/stars/apache/hudi?style=social&color=white" alt="Apache Hudi Stars"/></a> | `Streaming Data Lake Storage` | Streaming data lakehouse platform bringing transactions, CDC, and incremental ingestion to data lakes. | `Apache-2.0` |
+| **[Apache NiFi](https://github.com/apache/nifi)** | <a href="https://github.com/apache/nifi/stargazers"><img src="https://img.shields.io/github/stars/apache/nifi?style=social&color=white" alt="Apache NiFi Stars"/></a> | `Data Ingestion & Flow Automation` | Visual dataflow automation platform for real-time routing, transformation, and enterprise ingestion. | `Apache-2.0` |
+| **[dlt (data loading tool)](https://github.com/dlt-hub/dlt)** | <a href="https://github.com/dlt-hub/dlt/stargazers"><img src="https://img.shields.io/github/stars/dlt-hub/dlt?style=social&color=white" alt="dlt (data loading tool) Stars"/></a> | `Data Ingestion & ELT` | Python library for declarative loading of data from APIs and streams into databases. | `Apache-2.0` |
+| **[Maxwell](https://github.com/zendesk/maxwell)** | <a href="https://github.com/zendesk/maxwell/stargazers"><img src="https://img.shields.io/github/stars/zendesk/maxwell?style=social&color=white" alt="Maxwell Stars"/></a> | `Change Data Capture (CDC)` | Lightweight MySQL Change Data Capture (CDC) daemon reading binlogs to Kafka/Kinesis. | `Apache-2.0` |
+| **[Meltano](https://github.com/meltano/meltano)** | <a href="https://github.com/meltano/meltano/stargazers"><img src="https://img.shields.io/github/stars/meltano/meltano?style=social&color=white" alt="Meltano Stars"/></a> | `Data Ingestion & ELT` | CLI-first open-source ELT platform leveraging Singer taps and targets. | `MIT` |
+| **[Embulk](https://github.com/embulk/embulk)** | <a href="https://github.com/embulk/embulk/stargazers"><img src="https://img.shields.io/github/stars/embulk/embulk?style=social&color=white" alt="Embulk Stars"/></a> | `Data Ingestion & ELT` | Pluggable bulk data loader for parallel data transfers between databases and stores. | `Apache-2.0` |
+| **[ksqlDB](https://github.com/confluentinc/ksql)** | <a href="https://github.com/confluentinc/ksql/stargazers"><img src="https://img.shields.io/github/stars/confluentinc/ksql?style=social&color=white" alt="ksqlDB Stars"/></a> | `Stream Processing` | Event streaming database for building stream processing applications on Kafka with SQL. | `Confluent Community` |
+
+---
+
+## 🎯 Framework Selection Guide
+
+```mermaid
+flowchart TD
+    A["🌊 Data Ingestion Need"] --> B{"What type of data?"}
+    
+    B -->|"Database Changes (CDC)"| C["Debezium / Canal / Striim"]
+    B -->|"Event Streams & Messages"| D{"Latency & Ops Preference?"}
+    B -->|"SaaS APIs & DB Sync"| E["Airbyte / Meltano / dlt"]
+    B -->|"Logs, Metrics & Telemetry"| F["Vector / Fluent Bit / Fluentd"]
+
+    D -->|"Enterprise Standard / Java"| G["Apache Kafka / Confluent Cloud"]
+    D -->|"High Speed C++ / No Zookeeper"| H["Redpanda"]
+    D -->|"Multi-tenant / Geo-replication"| I["Apache Pulsar"]
+    D -->|"Lightweight Edge / IoT"| J["NATS JetStream"]
+
+    C --> K["Sink to Kafka / Data Lake / Redshift"]
+    G --> L["Stream Processing: Apache Flink / Spark / RisingWave"]
+    H --> L
+```
+
+---
+
+## 🤝 How to Contribute
+
+1. 🍴 **Fork the Repository** on GitHub.
+2. ✏️ **Add/Edit Entries** in `README.md` matching the existing table schemas.
+3. 📋 **Include required metadata**: Name, official link, factual 1-2 sentence description, open-source license or pricing structure.
+4. 🚀 **Submit a Pull Request** with a descriptive summary of changes.
+
+---
+
+## 📜 Disclaimer
+
+- 📌 **Community Curated**: This repository is maintained for educational and architectural reference purposes.
+- 🔒 **Security & Compliance**: Streaming ingestion engines process sensitive enterprise data in motion. Self-hosted deployments require proper encryption, access control, and schema validation.
+- ⚖️ **Licensing Note**: Verify individual project licenses (e.g., Apache-2.0, BSL, ELv2, MPL-2.0) before deploying in production environments.
+
+---
+
+## 💖 Support & Sponsorship
+
+If you find this curated ecosystem list helpful for your data engineering work or system architecture design:
+
+- ⭐ **Star this repository** to help others discover it!
+- 🔀 **Fork & Share** with your team and technical network.
+- ☕ **Support ongoing open-source maintenance**: Consider sponsoring via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+<p align="center">
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Sponsor-Sponsor%20@ishandutta2007-ea4aaa?style=for-the-badge&logo=github-sponsors" alt="Sponsor"/>
+  </a>
+</p>
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading&type=date&legend=top-left)
+
+---
+
+<p align="center">
+  <i>Maintained with ❤️ by <a href="https://github.com/ishandutta2007">Ishan Dutta</a> for data engineers, platform architects, and real-time streaming enthusiasts worldwide.</i>
+</p>
