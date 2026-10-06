@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading?style=social" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading?style=social" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Streaming-Data-Ingestion-Loading?color=blue" alt="License"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -54,9 +54,9 @@ Below is the curated list of enterprise SaaS & managed streaming ingestion platf
 
 Streaming data ingestion is one of the strongest open-source software ecosystems. Below is a comprehensive, curated matrix of top open-source projects across **Event Streaming**, **Stream Processing**, **ELT & Data Loading**, **CDC (Change Data Capture)**, **Log Observability**, and **Data Lakehouse Storage**.
 
-> 💡 **Note**: Every star badge links directly to the repo's official **Stargazers Page**. The list is sorted strictly by **GitHub Star Count (Descending)**.
+> 💡 **Note**: Every Stars_Badge links directly to the repo's official **Stargazers Page**. The list is sorted strictly by **GitHub Stars_Count (Descending)**.
 
-| Project Name 🚀 | GitHub Stars ⭐ | Category 🏷️ | Description & Key Features 📝 | License 📜 |
+| Project Name 🚀 | GitHub_Stars ⭐ | Category 🏷️ | Description & Key Features 📝 | License 📜 |
 | :--- | :---: | :--- | :--- | :---: |
 | **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** | <a href="https://github.com/ClickHouse/ClickHouse/stargazers"><img src="https://img.shields.io/github/stars/ClickHouse/ClickHouse?style=social&color=white" alt="ClickHouse Stars"/></a> | `Real-Time Analytical Storage` | Columnar real-time DBMS for ultra-fast streaming ingestion & analytics. | `Apache-2.0` |
 | **[Apache Airflow](https://github.com/apache/airflow)** | <a href="https://github.com/apache/airflow/stargazers"><img src="https://img.shields.io/github/stars/apache/airflow?style=social&color=white" alt="Apache Airflow Stars"/></a> | `Orchestration & Workflow` | Programmatically author, schedule, and orchestrate complex data ingestion pipelines. | `Apache-2.0` |
